@@ -1,0 +1,49 @@
+{
+  "response_code": 0,
+  "results": [
+    {
+      "category": "Entertainment: Film",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "Who starred as Bruce Wayne and Batman in Tim Burton&#039;s 1989 movie &quot;Batman&quot;?",
+      "correct_answer": "Michael Keaton",
+      "incorrect_answers": ["George Clooney", "Val Kilmer", "Adam West"]
+    },
+    {
+      "category": "Entertainment: Film",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "When was the movie &#039;Con Air&#039; released?",
+      "correct_answer": "1997",
+      "incorrect_answers": ["1985", "1999", "1990"]
+    },
+    {
+      "category": "Entertainment: Film",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "Which movie includes a giant bunny-like spirit who has magic powers including growing trees?",
+      "correct_answer": "My Neighbor Totoro",
+      "incorrect_answers": [
+        "Hop",
+        "Rise of the Guardians",
+        "Alice in Wonderland"
+      ]
+    },
+    {
+      "category": "Entertainment: Film",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "In the movie &quot;Blade Runner&quot;, what is the term used for human-like androids ?",
+      "correct_answer": "Replicants",
+      "incorrect_answers": ["Cylons", "Synthetics", "Skinjobs"]
+    },
+    {
+      "category": "Entertainment: Film",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "What is the name of the island that &quot;Jurassic Park&quot; is built on?",
+      "correct_answer": "Isla Nublar",
+      "incorrect_answers": ["Isla Sorna", "Isla Muerta", "Isla Pena"]
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+<div>
+    <div *ngIf="quizQuestion && quizQuestion.length > 0">
+        <h4>RESULTS</h4>
+        <div *ngFor="let question of quizQuestion; let questionIndex = index">
+            <h4>{{ question.question }}</h4>
+            <div class="row">
+                <div class="col">
+                    <div class="btn-group" role="group" aria-label="Options" *ngFor="
+                  let option of question.displayOptions;
+                  let optionIndex = index
+                ">
+                        <button type="button" class="btn btn-secondary custom-button" [ngClass]="getButtonClass(questionIndex, optionIndex)">
+                            {{ option }}
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="score-notification" [ngClass]="getScoreColorClass()">
+            You scored {{ score }} out of {{ quizQuestion.length }}
+        </div>
+        <div class="col">
+            <button class="btn btn-primary" id="createNewBtn" (click)="createNewQuiz()">Create a new Quiz</button>
+        </div>
+    </div>
+</div>
+  

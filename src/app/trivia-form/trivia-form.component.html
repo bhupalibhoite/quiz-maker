@@ -1,0 +1,43 @@
+<div>
+  <h4>QUIZ MAKER</h4>
+  <div class="input-group">
+    <select class="form-select" id="categorySelect" [(ngModel)]="selectedCategory" (change)="onCategoryChange()">
+      <option disabled selected>Select a category</option>
+      <option *ngFor="let category of categories" [value]="category.id">
+        {{ category.name }}
+      </option>
+    </select>
+    <select class="form-select" id="difficultySelect" [(ngModel)]="selectedDifficulty" (change)="onDifficultyChange()">
+      <option disabled selected>Select difficulty</option>
+      <option *ngFor="let level of difficultyLevels" [value]="level">
+        {{ level }}
+      </option>
+    </select>
+    <button id="createBtn" class="btn btn-primary" [disabled]="disableCreateButton" (click)="createTrivia()">
+      Create
+    </button>
+  </div>
+</div>
+
+<div *ngIf="quizQuestion.length > 0">
+  <div *ngFor="let question of quizQuestion; let questionIndex = index">
+    <h4>{{ question.question }}</h4>
+    <div class="row">
+      <div class="col">
+        <div class="btn-group" role="group" aria-label="Options" 
+        *ngFor="let option of question.displayOptions; let optionIndex = index">
+          <button type="button" class="btn btn-secondary spaced-button" [ngClass]="{
+              'active-option': selectedOptions[questionIndex.toString()] === optionIndex
+            }" (click)="selectOption(questionIndex.toString(), optionIndex)">
+            {{ option }}
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row" *ngIf="allQuestionsAnswered()">
+    <div class="col">
+      <button class="btn btn-primary" id="submitBtn" (click)="submitQuiz()">Submit</button>
+    </div>
+  </div>
+</div>
