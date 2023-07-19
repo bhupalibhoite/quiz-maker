@@ -9,6 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { QuizResultComponent } from './quiz-result/quiz-result.component';
 import { RouterModule } from '@angular/router';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { FormatEntityPipe } from './pipes/format-entity.pipe';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     TriviaFormComponent,
     QuizResultComponent,
     PageNotFoundComponent,
+    FormatEntityPipe,
   ],
   imports: [
     BrowserModule,
